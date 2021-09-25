@@ -1,6 +1,6 @@
 # Mathe Programm von nocheatoriginal
 
-Python´´´
+´´´Python
 # Copyright 2021 - nocheatoriginal
 #
 #
