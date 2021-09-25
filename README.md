@@ -1,6 +1,5 @@
-# Mathe Programm von nocheatoriginal
-
-´´´Python
+### Python:
+```python
 # Copyright 2021 - nocheatoriginal
 #
 #
@@ -181,4 +180,5 @@ def main():
 
 if __name__ == '__main__':
     main()
-´´´
+
+```
