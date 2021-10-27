@@ -1,4 +1,4 @@
-# Copyright 2021 - nocheatoriginal
+# Copyright 2021 - Nils Pourié
 #
 #
 import os
@@ -10,7 +10,7 @@ def bernouliFormel(p, n, k):
 def binomialkoeffizient(n, k):
     try:
         if k == 0:
-            return 1
+            return int(fakultät(n) / (fakultät(k) * fakultät(n-k))) # Immer 1 da: ergebnis = n / (1 * (n - 0) = n / n = 1
         elif k > n or k < 0 or n < 0:
             # print("FEHLER: k > n")
             return 0
@@ -23,32 +23,34 @@ def binomialkoeffizient(n, k):
 # Fakultät x! = (x+1)! / (x+1)
 def fakultät(zahl):
     ergebnis = zahl
-    if zahl == 0: 
-        return 1 # 0! = 1! / 1
-    elif zahl > 0:
+    if zahl < 0:
+        return 0 # "FEHLER"
+    elif zahl == 0: 
+        return int(fakultät(zahl + 1)/(zahl + 1)) # 0! = 1! / 1
+    else:
         while zahl > 1:
             ergebnis *= (zahl -1)
             zahl -= 1
-    else:
-        while zahl < -1:
-            ergebnis *= (zahl +1)
-            zahl +=1
-        ergebnis = 0
     return ergebnis
+    #else:
+    #    while zahl < -1:
+    #        ergebnis *= (zahl +1)
+    #        zahl +=1
+    #    ergebnis = 0
 
-def potenz(zahl, hoch):
-    if hoch == 0:
+def potenz(basis, exponent):
+    if exponent == 0:
         ergebnis = 1
-    elif hoch < 0:
-        positivhoch = hoch * (-1)
-        ergebnis = zahl
-        for i in range(positivhoch -1):
-            ergebnis *= zahl
+    elif exponent < 0:
+        positivexponent = exponent * (-1)
+        ergebnis = basis
+        for i in range(positivexponent -1):
+            ergebnis *= basis
         ergebnis = 1/ergebnis
     else:
-        ergebnis = zahl
-        for i in range(hoch -1):
-            ergebnis *= zahl
+        ergebnis = basis
+        for i in range(exponent -1):
+            ergebnis *= basis
     return ergebnis
 
 # Alternativer Algorithmus
@@ -119,7 +121,7 @@ def beispiele():
 def menu():
     print("Menu\n----")
     print("[1] fakultät(zahl)")
-    print("[2] potenz(zahl, hoch)")
+    print("[2] potenz(basis, exponent)")
     print("[3] binomialkoeffizient(n, k)")
     print("[4] bernouliFormel(p, n, k)")
     print("[5] binomCdf(n, p, untereGrenze, obereGrenze)")
@@ -143,7 +145,7 @@ def main():
             print(f"{fakultät(int(parameter1))}")
             print()
         elif _eingabe == "2":
-            print("[2] potenz(zahl, hoch)")
+            print("[2] potenz(basis, exponent)")
             parameter2 = input("Parameter eingeben >>> ")
             print(f'{potenz(int(parameter2.split(", ")[0]), int(parameter2.split(", ")[1]))}')
             print()
