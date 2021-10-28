@@ -1,5 +1,6 @@
 /// <Copyright> (c) 2021 nocheatoriginal
 /// </Copyright>
+
 public class Math_Stochastik
     {
         static void main(String[] args)
@@ -14,10 +15,10 @@ public class Math_Stochastik
 
                 if (input == "1")
                 {
-                    System.out.println("[1] fakult‰t(int zahl)");
+                    System.out.println("[1] fakult√§t(int zahl)");
                     System.out.print("Parameter eingeben >>> ");
                     String parameter = Console.ReadLine().ToString();
-                    System.out.println(fakult‰t(parseInt(parameter.Split(',')[0])));
+                    System.out.println(fakult√§t(parseInt(parameter.Split(',')[0])));
                 }
                 else if (input == "2")
                 {
@@ -49,7 +50,7 @@ public class Math_Stochastik
                 }
                 else if (input == "6")
                 {
-                    System.out.println("[6] dezimalzahl(int z‰hler, int nenner)");
+                    System.out.println("[6] dezimalzahl(int z√§hler, int nenner)");
                     System.out.print("Parameter eingeben >>> ");
                     String parameter = Console.ReadLine().ToString();
                     System.out.println(dezimalzahl(parseInt(parameter.Split(',')[0]), parseInt((parameter.Split(',')[1]))));
@@ -69,17 +70,17 @@ public class Math_Stochastik
         static void menu()
         {
             System.out.println("Menu\n-----");
-            System.out.println("[1] fakult‰t(int zahl)");
+            System.out.println("[1] fakult√§t(int zahl)");
             System.out.println("[2] potenz(double zahl, int hoch)");
             System.out.println("[3] binomialkoeffizient(int n, int k)");
             System.out.println("[4] bernouliFormel(double p, int n, int k)");
             System.out.println("[5] binomCdf(int n, double p, int untereGrenze, int obereGrenze)");
-            System.out.println("[6] dezimalzahl(int z‰hler, int nenner)");
+            System.out.println("[6] dezimalzahl(int z√§hler, int nenner)");
             System.out.println("clear");
             System.out.println("exit\n-----");
         }
 
-        static int fakult‰t(int zahl)
+        static int fakult√§t(int zahl)
         {
             int ergebnis = zahl;
             if (zahl == 0)
@@ -136,7 +137,7 @@ public class Math_Stochastik
             }
             else
             {
-                return fakult‰t(n) / (fakult‰t(k) * fakult‰t(n - k));
+                return fakult√§t(n) / (fakult√§t(k) * fakult√§t(n - k));
             }
         }
 
@@ -157,8 +158,8 @@ public class Math_Stochastik
             return ergebnis;
         }
 
-        static double dezimalzahl(int z‰hler, int nenner)
+        static double dezimalzahl(int z√§hler, int nenner)
         {
-            return z‰hler / nenner;
+            return z√§hler / nenner;
         }
     }
