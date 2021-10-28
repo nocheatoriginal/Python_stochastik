@@ -24,6 +24,7 @@ def binomialkoeffizient(n, k):
 def fakultät(zahl):
     ergebnis = zahl
     if zahl < 0:
+        print("FEHLER")
         return 0 # "FEHLER"
     elif zahl == 0: 
         return int(fakultät(zahl + 1)/(zahl + 1)) # 0! = 1! / 1
