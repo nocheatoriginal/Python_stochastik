@@ -177,6 +177,8 @@ def main():
         elif _eingabe == "exit":
             print("Verlassen")
             running = False
+        else:
+            print(f"'{_eingabe}': command not found")
 
     print("Vielen Dank für die Benutzung!")
 
