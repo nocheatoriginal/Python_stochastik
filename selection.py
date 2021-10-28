@@ -8,7 +8,7 @@ def getHelloWorld():
 	return f"{getHello()} {getWorld()}!"
 
 def functionWithParam(param1, param2):
-	return f"Welcome {param1}, ID = {param2}"
+	return f"{param1 = }, {param2 = }"
 
 def printOptions():
 	print("[1] getHello()")
@@ -37,7 +37,7 @@ def main():
 		elif eingabe == "exit":
 			running = False
 		else:
-			print("Leave program with exit or choose a valid option:")
+			print(f"'{eingabe}': command not found\nLeave program with exit or choose a valid option:")
 
 if __name__ == '__main__':
 	main()
