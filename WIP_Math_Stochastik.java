@@ -1,7 +1,7 @@
 /// <Copyright> (c) 2021 nocheatoriginal
 /// </Copyright>
 
-public class Math_Stochastik
+public class WIP_Math_Stochastik
     {
         static void main(String[] args)
         {
