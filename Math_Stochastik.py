@@ -24,7 +24,6 @@ def binomialkoeffizient(n, k):
 def fakultät(zahl):
     ergebnis = zahl
     if zahl < 0:
-        print("FEHLER")
         return 0 # "FEHLER"
     elif zahl == 0: 
         return int(fakultät(zahl + 1)/(zahl + 1)) # 0! = 1! / 1
@@ -173,8 +172,11 @@ def main():
             print()
         elif _eingabe == "clear":
             # Sofern Programm auf Windows-Rechner läuft:
-            clear = lambda: os.system('cls')
-            clear()
+            try:
+                clear = lambda: os.system('cls')
+                clear()
+            except:
+                print(f"'{_eingabe}': cls command not defined on current OS")
         elif _eingabe == "exit":
             print("Verlassen")
             running = False
@@ -185,3 +187,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
