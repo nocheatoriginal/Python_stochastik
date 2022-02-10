@@ -1,4 +1,4 @@
-# Copyright 2021 - Nils Pourié
+# Copyright 2021 - nocheatoriginal
 #
 #
 import os
